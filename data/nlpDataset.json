@@ -1,0 +1,119 @@
+[
+    {
+        "instruction": "创建一个登录表单，包含用户名和密码输入框，以及一个提交按钮",
+        "expected": {
+            "intent": "create",
+            "components": [
+                "Form",
+                "Input",
+                "Input",
+                "Button"
+            ],
+            "properties": {
+                "Input": [
+                    {
+                        "name": "用户名",
+                        "type": "text"
+                    },
+                    {
+                        "name": "密码",
+                        "type": "password"
+                    }
+                ],
+                "Button": {
+                    "text": "提交"
+                }
+            }
+        }
+    },
+    {
+        "instruction": "如果用户是VIP，则显示专属折扣码输入框",
+        "expected": {
+            "intent": "condition",
+            "components": [
+                "Input"
+            ],
+            "properties": {
+                "Input": {
+                    "name": "专属折扣码",
+                    "condition": "user.isVIP"
+                }
+            },
+            "condition": "用户是VIP"
+        }
+    },
+    {
+        "instruction": "更新用户资料表单，包含姓名、邮箱和手机号字段，其中手机号必填",
+        "expected": {
+            "intent": "update",
+            "components": [
+                "Form",
+                "Input",
+                "Input",
+                "Input"
+            ],
+            "properties": {
+                "Input": [
+                    {
+                        "name": "姓名"
+                    },
+                    {
+                        "name": "邮箱",
+                        "type": "email"
+                    },
+                    {
+                        "name": "手机号",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "instruction": "当订单金额大于1000元时，显示免运费标签和优惠券选择框",
+        "expected": {
+            "intent": "condition",
+            "components": [
+                "Label",
+                "Select"
+            ],
+            "properties": {
+                "Label": {
+                    "text": "免运费"
+                },
+                "Select": {
+                    "name": "优惠券"
+                }
+            },
+            "condition": "订单金额大于1000元"
+        }
+    },
+    {
+        "instruction": "创建产品列表表格，包含名称、价格和库存列，库存少于10时显示红色警告",
+        "expected": {
+            "intent": "create",
+            "components": [
+                "Table"
+            ],
+            "properties": {
+                "Table": {
+                    "columns": [
+                        "名称",
+                        "价格",
+                        "库存"
+                    ],
+                    "conditions": [
+                        {
+                            "column": "库存",
+                            "operator": "<",
+                            "value": 10,
+                            "style": {
+                                "color": "red"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]

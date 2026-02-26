@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Schema编辑器样式 */
+.schema-editor .preview-panel {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 10px;
+  height: 400px;
+  overflow: auto;
+  background-color: #f9f9f9;
+}
+
+.schema-editor .preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.schema-editor .preview-component {
+  border: 1px dashed #1890ff;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #e6f7ff;
+  min-width: 80px;
+  text-align: center;
+}
+
+.schema-editor .empty-preview {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+.schema-editor .error-message {
+  color: #ff4d4f;
+  margin-top: 10px;
+}

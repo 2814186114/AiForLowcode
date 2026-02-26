@@ -1,0 +1,67 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "张三",
+            "email": "zhangsan@example.com"
+        },
+        {
+            "users": [
+                {
+                    "id": 1,
+                    "name": "John Doe",
+                    "email": "john@example.com"
+                },
+                {
+                    "id": 2,
+                    "name": "Jane Smith",
+                    "email": "jane@example.com"
+                }
+            ],
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Product A",
+                    "price": 99.99
+                },
+                {
+                    "id": 2,
+                    "name": "Product B",
+                    "price": 149.99
+                }
+            ],
+            "ai": {
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "title": "姓名"
+                        },
+                        "email": {
+                            "type": "string",
+                            "title": "邮箱",
+                            "format": "email"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "email"
+                    ]
+                }
+            }
+        }
+    ],
+    "products": [
+        {
+            "id": 101,
+            "name": "产品A",
+            "price": 99.9
+        },
+        {
+            "id": 102,
+            "name": "产品B",
+            "price": 199.9
+        }
+    ]
+}
